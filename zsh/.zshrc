@@ -1,4 +1,5 @@
 alias reload="source ~/.zshrc"
+alias vim=nvim
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -107,7 +108,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export COLORTERM=truecolor
 
+export PATH="$PATH:/usr/local/go/bin"
 export GOPATH="$HOME/go"
-export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$GOPATH/bin"
 
 
