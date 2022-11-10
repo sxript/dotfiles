@@ -3,3 +3,4 @@
 .bundle
 .env
 .git/
+nvim/.config/nvim/plugin/packer_compiled.lua
