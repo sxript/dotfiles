@@ -3,6 +3,8 @@ vim.opt.relativenumber = true                   -- set relative numbered lines
 
 vim.opt.errorbells = false                      -- no bell sound
 
+vim.opt.showmode = false
+
 vim.opt.tabstop = 4                             -- tab = 4 spaces
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4                          -- 4 spaces for indentation
