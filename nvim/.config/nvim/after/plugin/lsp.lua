@@ -44,3 +44,5 @@ require("lspconfig").gopls.setup(config({
 		},
 	},
 }))
+
+require'lspconfig'.clangd.setup{}
