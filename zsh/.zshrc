@@ -1,5 +1,8 @@
 alias reload="source ~/.zshrc"
 alias vim=nvim
+# alias lala="find | sed 's|[^/]*/|- |g'"
+
+
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
