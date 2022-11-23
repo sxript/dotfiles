@@ -1,4 +1,6 @@
 local cmp = require("cmp")
+local luasnip = require("luasnip")
+
 local source_mapping = {
 	buffer = "[BUF]",
 	nvim_lsp = "[LSP]",
@@ -13,6 +15,11 @@ local function has_words_before()
 end
 
 cmp.setup({
+    snippet = {
+        expand = function(args)
+            luasnip.lsp_expand(args.body)
+        end,
+    },
 	mapping = cmp.mapping.preset.insert({
         ['<C-y>'] = cmp.mapping.confirm({ select = true }),
 		["<C-u>"] = cmp.mapping.scroll_docs(-4),
@@ -26,7 +33,23 @@ cmp.setup({
 			else
 				fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
 			end
-		end, { "i", "s" }) 
+		end, { "i", "s" }),
+        ["<C-j>"] = cmp.mapping(function(fallback)
+            if luasnip.expandable() then
+                luasnip.expand()
+            elseif luasnip.expand_or_jumpable() then
+                luasnip.expand_or_jump()
+            else
+                fallback()
+            end
+         end, { "i", "s" }),
+		 ["<C-k>"] = cmp.mapping(function(fallback)
+            if luasnip.jumpable(-1) then
+                luasnip.jump(-1)
+            else
+                fallback()
+            end
+         end, { "i", "s" }),
 	}),
 
 	formatting = {
@@ -44,11 +67,14 @@ cmp.setup({
     },
 
 	sources = {
-        { name = "nvim_lsp" },
-		{ name = "buffer" },
+        { name = "nvim_lsp", max_item_count = 6 },
+		{ name = "buffer", max_item_count = 6 },
         { name = "path" },
+        { name = "luasnip" },
 	},
 })
+
+require("luasnip/loaders/from_vscode").lazy_load()
 
 --[[
 -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).

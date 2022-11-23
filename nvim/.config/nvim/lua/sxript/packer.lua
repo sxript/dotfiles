@@ -38,11 +38,25 @@ return require('packer').startup(function(use)
   use('onsails/lspkind-nvim')
   use('hrsh7th/nvim-cmp')
 
+  -- Snippets
+  use("L3MON4D3/LuaSnip")
+  use('saadparwaiz1/cmp_luasnip')
+  use('rafamadriz/friendly-snippets')
+
   -- Telescope
   use {
       'nvim-telescope/telescope.nvim',
       branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  -- nvim tree
+  use {
+     'nvim-tree/nvim-tree.lua',
+      requires = {
+        'nvim-tree/nvim-web-devicons', -- optional, for file icons
+      },
+      tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
   -- Which key

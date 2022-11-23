@@ -3,6 +3,8 @@ vim.opt.relativenumber = true                   -- set relative numbered lines
 
 vim.opt.errorbells = false                      -- no bell sound
 
+vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
+
 vim.opt.showmode = false
 
 vim.opt.tabstop = 4                             -- tab = 4 spaces
