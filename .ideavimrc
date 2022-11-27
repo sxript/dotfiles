@@ -1,0 +1,58 @@
+" leader
+let mapleader = " "
+
+" NerdTree
+set nerdtree
+map <Leader>e :NERDTree<CR> 
+"" Source your .vimrc
+"source ~/.vimrc
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+" Terminal
+nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+
+" Editing Source Code
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+
+" Searching Source Code
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gt :action GotoTest<CR>
+nnoremap vca :action GotoAction<CR>
+nnoremap <Leader>f :action FindInPath<CR>
+nnoremap <Leader>s :action GotoFile<CR>
+nnoremap <Leader>rn :action RenameElement<CR>
+nnoremap <Leader>rr :action ShowUsages<cr>
+
+" Window Navigation
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
+" Common settings
+nnoremap <Esc> :noh<CR><Esc>
+set scrolloff=8
+set clipboard=unnamed
+set clipboard+=ideaput
+set number relativenumber
+set ignorecase smartcase
+set hlsearch
+set incsearch
+set showmode
+set history=10000
+
+set noerrorbells
+set visualbell
+
+nnoremap <Left>  <CR>
+nnoremap <Right> <CR>
+nnoremap <Up>    <CR>
+nnoremap <Down>  <CR>
+" ...and in insert mode
+inoremap <Left>  <CR>
+inoremap <Right> <CR>
+inoremap <Up>    <CR>
+inoremap <Down>  <CR>
