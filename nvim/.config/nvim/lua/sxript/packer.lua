@@ -50,6 +50,9 @@ return require('packer').startup(function(use)
       requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- Git
+  use("tpope/vim-fugitive")
+
   -- nvim tree
   use {
      'nvim-tree/nvim-tree.lua',

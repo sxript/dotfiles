@@ -46,3 +46,7 @@ require("lspconfig").gopls.setup(config({
 }))
 
 require'lspconfig'.clangd.setup(config())
+
+require'lspconfig'.tsserver.setup(config())
+
+require'lspconfig'.eslint.setup(config())
