@@ -37,7 +37,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.cmdheight = 1                           -- more space for displaying messages
 vim.opt.numberwidth = 2
 
-vim.opt.updatetime = 250                        -- default updatetime is 4000ms 
+vim.opt.updatetime = 50                        -- default updatetime is 4000ms 
 
 vim.opt.completeopt='menuone,noinsert,noselect'
 vim.opt.shortmess:append('c')
