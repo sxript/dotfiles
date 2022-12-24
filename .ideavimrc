@@ -1,6 +1,8 @@
 " leader
 let mapleader = " "
 
+set commentary
+
 " NerdTree
 set nerdtree
 map <Leader>e :NERDTree<CR> 
@@ -31,6 +33,13 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
+
+vnoremap J :action MoveLineDown<CR>
+vnoremap K :action MoveLineUp<CR>
+
+nnoremap J mzJ`z<CR>
+nnoremap <C-d> <C-d>zz<CR>
+nnoremap <C-u> <C-u>zz<CR>
 
 " Common settings
 nnoremap <Esc> :noh<CR><Esc>
