@@ -1,5 +1,6 @@
 alias reload="source ~/.zshrc"
 alias vim=nvim
+alias sudo="sudo "
 # alias lala="find | sed 's|[^/]*/|- |g'"
 
 
@@ -106,13 +107,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export COLORTERM=truecolor
 
-export PATH="$PATH:/usr/local/go/bin"
-export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH/bin"
+# export PATH="$PATH:/usr/local/go/bin"
+# export GOPATH="$HOME/go"
+# export PATH="$PATH:$GOPATH/bin"
 
 

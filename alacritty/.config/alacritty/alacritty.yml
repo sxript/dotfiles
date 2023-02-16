@@ -1,0 +1,31 @@
+shell: /bin/zsh
+# Window configuration
+window:
+  #  decorations: None
+  padding:
+    x: 4
+    y: 4
+  class:
+    instance: Alacritty
+    general: Alacritty
+  opacity: 0.95
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+# Font configuration
+font:
+  normal:
+    family: JetBrainsMonoNL Nerd Font Mono
+    style: Medium
+  bold:
+    family: JetBrainsMonoNL Nerd Font Mono
+    style: Bold
+  italic:
+   family: JetBrainsMonoNL Nerd Font Mono
+   style: Medium Italic
+  bold_italic:
+    family: JetBrainsMonoNL Nerd Font Mono
+    style: Bold Italic
+  size: 14
