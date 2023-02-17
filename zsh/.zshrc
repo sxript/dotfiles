@@ -1,4 +1,3 @@
-alias reload="source ~/.zshrc"
 alias vim=nvim
 alias sudo="sudo "
 # alias lala="find | sed 's|[^/]*/|- |g'"
@@ -114,3 +113,4 @@ export COLORTERM=truecolor
 # export PATH="$PATH:$GOPATH/bin"
 
 
+export PATH=$PATH:/home/filip/.spicetify
