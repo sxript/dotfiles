@@ -19,7 +19,7 @@ font pango:monospace 10
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
-exec --no-startup-id xrandr --verbose --output "DP-2" --primary --output "HDMI-0" --right-of "DP-2"
+exec --no-startup-id xrandr --verbose --output "DP-2" --mode 2560x1440 --rate 144.00 --primary --output "HDMI-0" --mode 1920x1080 --right-of "DP-2" --rate 75.00
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart

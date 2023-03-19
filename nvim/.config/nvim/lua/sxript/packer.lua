@@ -28,8 +28,11 @@ return require('packer').startup(function(use)
   }
 
   -- LSP
-  use("neovim/nvim-lspconfig")
-
+  use {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+      "neovim/nvim-lspconfig",
+  }
   -- CMP
   use('hrsh7th/cmp-cmdline')
   use('hrsh7th/cmp-path')

@@ -1,3 +1,6 @@
+require("mason").setup()
+require("mason-lspconfig").setup()
+
 local function config(_config)
 	return vim.tbl_deep_extend("force", {
 		on_attach = function()
@@ -46,3 +49,27 @@ require'lspconfig'.clangd.setup(config())
 require'lspconfig'.tsserver.setup(config())
 
 require'lspconfig'.eslint.setup(config())
+
+require'lspconfig'.lua_ls.setup(config({
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}))
+
